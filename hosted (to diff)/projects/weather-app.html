@@ -1,0 +1,147 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	  <script>
+	  	//c to f conversion only works in debug mode due to the use of span with type="link" in place of buttons for the aesthetic
+
+$(document).ready(function() {
+  $.getJSON('http://ip-api.com/json', function(response) {
+    var city = response.city;
+    $("#City").html(response.city + ", " + response.region);
+    displayWeather(city);
+  });
+
+  function displayWeather(city) {
+    var weatherAPI = "http://api.openweathermap.org/data/2.5/weather?q=";
+    var units = "&units=metric";
+    var API_Key = "&APPID=1ce9a2bb38fce8615c8ceb3367baf542"; // Parameter + API key
+    var full_API_Link = weatherAPI + city + units + API_Key;
+    $.getJSON(full_API_Link, function(response) {
+      $("#weatherData").html(response.weather[0].description.toUpperCase());
+      $("#tempData").html(response.main.temp);
+      weatherPic(response.weather[0].main);
+      toggle_f(response.main.temp);
+    });
+    
+  } 
+  function weatherPic(weatherMain) {
+    switch (weatherMain) {
+      case 'Drizzle':
+        $('.display').css("background-image", "url(https://c1.staticflickr.com/4/3660/3682708435_269a53483e_b.jpg)");
+        break;
+      case 'Clouds':
+        $('.display').css("background-image", "url(https://4.bp.blogspot.com/_jFM-Fd8NDFE/TDIW5t8qpnI/AAAAAAAAHPA/zfH7Ujr1uiw/s1600/Painted+Clouds.jpg)");
+        break;
+      case 'Rain':
+        $('.display').css("background-image", "url(https://c1.staticflickr.com/4/3660/3682708435_269a53483e_b.jpg)");
+        break;
+      case 'Snow':
+        $('.display').css("background-image", "url(http://jenniferwalton.com/images/Night-Snow-Globe.jpg)");
+        break;
+      case 'Clear':
+        $('.display').css("background-image", "url(http://images.huffingtonpost.com/2013-07-15-ScreenShot20130714at5.56.51PM.jpg)");
+        break;
+      case 'Thunderstorm':
+        $('.display').css("background-image", "url(https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/storm-at-sea-bonnie-rogers.jpg)");
+        break;
+      default:
+        $('.display').css("background-image", "url(https://4.bp.blogspot.com/_jFM-Fd8NDFE/TDIW5t8qpnI/AAAAAAAAHPA/zfH7Ujr1uiw/s1600/Painted+Clouds.jpg)");
+    }
+  } 
+  
+  function toggle_f(c) {
+   
+    var f = Math.round((c * 9) / 5 + 32);
+    $('#temp').click(function() {
+      var nowVal = $("#tempData").val();
+      if (nowVal == "f") {
+        $("#tempData").text(c).val("c");
+        $("#unit").html("&#176;C")
+      } else {
+        $("#tempData").text(f).val("f");
+        $("#unit").html("&#176;F")
+      }
+    });
+  }
+});
+	  </script>
+	  
+	  <style>
+	  	body {
+  background: url("http://static2.crated.com/1ikyw2yChKJ6jyt0H_5tYpDIqTE=/fit-in/960x960/filters:quality(90)/crated/thumbs/art/2014/06/03/588b44d5860863e4425d2e246b371ea7/960.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.top {
+  text-align: center;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 3.8em;
+  font-weight: bold;
+  margin-bottom: 2%;
+}
+
+.container {
+  text-align: center;
+  width: 50%;
+  margin-top: 10%;
+}
+
+#weatherData {
+  margin-top: 2%;
+}
+
+.display {
+  background-image: url(https://4.bp.blogspot.com/_jFM-Fd8NDFE/TDIW5t8qpnI/AAAAAAAAHPA/zfH7Ujr1uiw/s1600/Painted+Clouds.jpg);
+  text-align: center;
+  border-style: solid;
+  border-width: 5px;
+  border-color: black;
+  border-radius: 10px;
+  padding: 10px 0 10px;
+}
+
+.ffs {
+  font-style: italic;
+}
+
+.display h2 {
+  font-size: 2.5em;
+}
+
+#weatherData {
+  font-size: 3em;
+  font-weight: bold;
+}
+
+#unit {
+  color: purple;
+  
+}
+	  </style>
+  	</head>
+  
+  	<body>
+  		<div class="container">
+  <div class="display">
+    <br/>
+    <h2 class="ffs">You could just look outside</h2>
+    <br/>
+    <h1 id="weatherData">Light Clouds</h1>
+    <br/>
+    <h2><span id="City">London, UK</span></h2>
+    <br/>
+    <br/>
+    <h3><span id="tempData">17</span><span type="link" id="temp"><sup id="unit"> &#176;C</sup></span></h3>
+    <br/>
+  </div>
+</div>
+  	</body>
+</html>

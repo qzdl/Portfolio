@@ -1,0 +1,155 @@
+.no-link {
+  color: $font__color;
+}
+
+.job-title {
+  font-style: italic;
+}
+
+.column {
+  float: left;
+  font-size: $font__size;
+}
+
+.col {
+  &-80-20 {
+  font-size: 0;
+
+    .column {
+      &.first {
+        width: 80%;
+      }
+
+      &.second {
+        width: 20%;
+      }
+    }
+  }
+
+  &-75-25 {
+  font-size: 0;
+
+    .column {
+      &.first {
+        width: 75%;
+      }
+
+      &.second {
+        width: 25%;
+      }
+    }
+  }
+
+  &-70-30 {
+    font-size: 0;
+    .column {
+      &.first {
+        width: 70%;
+      }
+
+      &.second {
+        width: 30%;
+      }
+    }
+  }
+
+}
+
+h1 {
+  font-size: $font__size--headline;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+footer {
+  text-align: center;
+}
+
+.first-name {
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+ul {
+  list-style: none;
+}
+
+img.media {
+  width: 100%;
+  overflow: hidden;
+}
+
+.text-block {
+  font-size: $font__size;
+  margin-bottom: 7px;
+  line-height: 13px;
+
+  &__title {
+    text-transform: uppercase;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 3px;
+  }
+
+  &__chunk {
+    display: block;
+
+    &.para {
+      margin-top: 7px;
+    }
+  }
+}
+
+.clearfix {
+  clear:both;
+  overflow: auto;
+}
+
+.bold-right {
+  font-weight: 600;
+  float: right;
+}
+
+.tech {
+  padding-left: 15px;
+
+  .rating {
+    font-weight: 700;
+    float: right;
+    text-align: right;
+  }
+
+  li {
+    &::before {
+      content: "\2020";
+    }
+  }
+}
+
+a {
+  color: $lush;
+  &:hover {
+    @extend .rainbow;
+  }
+}
+
+@media(max-width: 550px) {
+  .bold-right {
+    float: none;
+    display: block;
+  }
+
+  h1 {
+    font-size: 1.25rem;
+  }
+
+  .no-bullet {
+    padding-left: 10px;
+  }
+}
+
+@media(max-width: 380px) {
+  h1 {
+    font-size: 1.15rem;
+  }
+}
