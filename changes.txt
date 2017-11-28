@@ -14,3 +14,7 @@ portfolio changes
 	
 		}}}} on mobile
 		
+
+		    // transition: transform .4s ease,-webkit-transform .4s ease;
+
+			//     transform: translate3d(0, 0, 0);

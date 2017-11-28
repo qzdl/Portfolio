@@ -16,10 +16,12 @@
 
 //layout
 @import "layout/header";
+@import "layout/body";
 @import "layout/footer";
 
 //components
-@import "components/cols";
+@import "components/columns";
+@import "components/navigation";
 
 //templates 
 @import "index";
