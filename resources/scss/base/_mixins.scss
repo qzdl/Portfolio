@@ -1,0 +1,24 @@
+// main: ../imports.scss
+
+@mixin crossbrowser($property, $val) {
+  -webkit-#{$property}: $val;
+  -moz-#{$property}: $val;
+  -ms-#{$property}: $val;
+  #{$property}: $val;
+}
+
+@mixin font-size($size: 1.6) {
+  font-size: $size * 10px;
+  font-size: $size * 1rem;
+}
+
+@mixin headings($list, $size: 4.2) {
+  @each $item in $list {
+    $size: $size - 0.6;
+    #{$item}, .#{$item} {
+      font-size: $size * 10px;
+      font-size: $size * 1rem;
+      @content;
+    }
+  }
+}

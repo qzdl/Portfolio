@@ -1,3 +1,5 @@
+// main: ../imports.scss
+
 .no-link {
   color: $font__color;
 }
@@ -127,7 +129,7 @@ img.media {
 }
 
 a {
-  color: $lush;
+  color: $link--actionable;
   &:hover {
     @extend .rainbow;
   }

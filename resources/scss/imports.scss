@@ -23,13 +23,13 @@
 @import "components/columns";
 @import "components/navigation";
 
-//templates 
-@import "index";
-@import "resume";
-@import "pong";
-@import "fractal-generator";
-@import "weather-app";
-@import "quote-generator";
+//templates
+@import "templates/index";
+@import "templates/resume";
+@import "templates/pong";
+@import "templates/fractal-generator";
+@import "templates/weather-app";
+@import "templates/quote-generator";
 
 //breakpoints
 @import "breakpoints/lg";
@@ -41,4 +41,4 @@
 @import "breakpoints/xs";
 
 //misc
-@import "misc/panic-button";
+@import "misc/panic";

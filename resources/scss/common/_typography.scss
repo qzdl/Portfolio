@@ -1,57 +1,15 @@
+// main: ../imports.scss
+
 body {
-  background-color: $body__bg;
-  padding: 5px 15px;
+    color: $font__color;
+    font-size: 62.5%;
 }
 
-.page {
-  background-color: $page__bg;
-  box-shadow: 0px 0px 10px #c9c9c9;
-  max-width: 595px;
-  margin: 10px auto;
-  padding: 3rem 5% 3% 5%;
-
-  // scale page size with testing
+%heading {
+  font-weight: 300;
+  text-transform: uppercase;
 }
 
-.section, {
-  &__heading {
-    font-size: $font__size--heading;
-    text-transform: uppercase;
-    border-bottom: solid 1px $font__color;
-    margin-bottom: 7px;
-    font-weight: 700;
-
-    .column {
-      font-size: $font__size--heading;
-    }
-  }
-
-  &__content {
-    padding-left: 10px;
-  }
-}
-
-@media (max-width: 550px) {
-  .page {
-  }
-
-  .section {
-    &.skills {
-      .col {
-        &-75-25 {
-        font-size: 0;
-
-          .column {
-            &.first {
-              width: 60%;
-            }
-
-            &.second {
-              width: 40%;
-            }
-          }
-        }
-      }
-    }
-  }
+@include headings(h1 h2 h3 h4 h5 h6) {
+  @extend %heading;
 }
