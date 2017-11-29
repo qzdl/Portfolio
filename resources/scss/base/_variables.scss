@@ -3,16 +3,12 @@
 // colors
 $white: #ffffff;
 $off-white: #f2f2f2;
-
 $green: #3dc51b;
-
 $pink: #ff8686;
 $red: #bb1e1e;
-
 $grey--light: #b6b6b6;
 $grey: #777777;
 $grey--dark: #444444;
-
 $black: #1a1a1a;
 $black--true: #000000;
 
@@ -31,13 +27,17 @@ $resume__bg: $off-white;
 
 // component
 $page__bg: $white;
+$page__font__size: 1.1;
+$page__font__size--heading: 1.2;
+$page__font__size--headline: 3.0;
 
 // typography
 $font: 'Times New Roman';
-$font__color: $grey--dark;
-$font__size: 1.1;
+$font__size: 1.8;
 $font__size--heading: 1.2;
 $font__size--headline: 3.0;
+$font__color: $grey--dark;
+
 $link: $grey;
 $link--active: $pink;
 

@@ -47,11 +47,7 @@ a,
   font-weight: 310;
 }
 
-p {
-  line-height: 2;
-  font-size: 18px;
 
-}
 
 .section-services h2,
 .section-services p {
@@ -79,10 +75,6 @@ section {
   padding: 5em 0;
 }
 
-footer {
-  padding: 5em 0;
-}
-
 @media screen and (max-width: 750px) and (min-width: 500px) {
   form {
     max-width: 70%;
@@ -90,9 +82,7 @@ footer {
 }
 
 ul {
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
+
 }
 
 hr {
@@ -109,31 +99,6 @@ hr {
   max-width: 100%;
 }
 
-
-/*Header*/
-
-.navbar-brand {
-  padding: 5px 5px -5px 5px;
-  background-color: rgb(255, 255, 255);
-  border-radius: 5% rect;
-}
-
-.navbar-default {
-  background: #fff;
-}
-
-.navbar .fa-external-link {
-  vertical-align: top;
-}
-
-.navbar-default .navbar-nav > li > a:hover,
-.navbar-default .navbar-nav > li > a:focus {
-  color: #ff8686;
-}
-
-.navbar-default .navbar-nav > li > a:active {
-  color: #940000;
-}
 
 
 /*Main*/

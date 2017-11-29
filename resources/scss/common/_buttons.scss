@@ -11,7 +11,7 @@
 }
 
 .button--primary {
-  
+
 }
 
 .button--secondary {
@@ -20,7 +20,15 @@
 
 [class^="button__mod"] {
   @extend %button--default;
-
+    
+  &:before,
+  &::before,
+  &:after,
+  &::after {
+    z-index: -1;
+    box-sizing: border-box;
+    transition: 0.5s ease-in-out;
+  }
 }
 
 .button__mod--swipe {

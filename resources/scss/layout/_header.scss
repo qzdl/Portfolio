@@ -1,1 +1,28 @@
 // main: ../imports.scss
+
+// ----------------------------------
+// HEADER
+// ----------------------------------
+
+.navbar-brand {
+  padding: 5px 5px -5px 5px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 5% rect;
+}
+
+.navbar-default {
+  background: #fff;
+}
+
+.navbar .fa-external-link {
+  vertical-align: top;
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #ff8686;
+}
+
+.navbar-default .navbar-nav > li > a:active {
+  color: #940000;
+}

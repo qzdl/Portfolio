@@ -9,7 +9,8 @@
     @extend %rainbow__txt;
 
     &--active {
-      &:hover, &:focus {
+      &:hover,
+      &:focus {
         @extend %rainbow__txt;
       }
     }
@@ -19,7 +20,8 @@
     @extend %rainbow__bg;
 
     &--active {
-      &:hover, &:focus {
+      &:hover,
+      &:focus {
         @extend %rainbow__bg;
       }
     }
@@ -35,11 +37,6 @@ h1 {
 
 
 
-
-
-ul {
-  list-style: none;
-}
 
 img.media {
   width: 100%;

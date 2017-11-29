@@ -1,5 +1,9 @@
 // main: ../imports.scss
 
+// ----------------------------------
+// FUNCTIONS
+// ----------------------------------
+
 @function random-color($min: 0, $max: 255, $alpha: 1) {
 	@if $min < 0 {
 		$min: -1;
@@ -7,7 +11,7 @@
 		$min: $min - 1;
 	}
 	@if $max > 255 {
-		$max: 256;
+    $max: 256;
 	} @else {
 		$max: $max + 1;
 	}

@@ -1,14 +1,9 @@
 // main: ../imports.scss
 
+// Set base 10 for rem
+// -------------------
 html {
   font-size: 62.5%;
-}
-
-*:before,
-*:after {
-  z-index: -1;
-  box-sizing: border-box;
-  transition: 0.5s ease-in-out;
 }
 
 p {
@@ -18,5 +13,7 @@ p {
 }
 
 ul {
-  list-style: none;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
 }

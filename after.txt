@@ -1,0 +1,112 @@
+<%@ Page Language="VB" Inherits="System.Web.UI.Page" %>
+<%@ Import Namespace="WestGroup.Profiles" %>
+<%@ Import Namespace="RED.Common.Diagnostics" %>
+
+<script runat="server">
+    Private Property Channel As String = ""
+    Private Property LogoName As String = ""
+    Private Property Phone As String = ""
+    Private Property Email As String = ""
+    Private Property MyChannel As Channels
+
+    Protected Sub Page_Init(sender As Object, e As EventArgs) Handles Me.Init
+        Try
+            MyChannel = GetMyChannel()
+            Select Case MyChannel
+                Case Channels.Eoxshop
+                    Channel = "eoxshop"
+                    LogoName = "Eoxshop"
+                    Phone = "44(0)23 9226 6031"
+                    Email = "sales@eoxshop.com"
+                Case Channels.Injectech
+                    Channel = "injectech"
+                    Phone = "970-482-0273"
+                    Email = "sales@injectech.us"
+                Case Channels.Westgroup
+                    Channel = "westgroup"
+                    Phone = "02392 266031"
+                    Email = "sales@westgroup.co.uk"
+                Case Else
+                    Channel = "eoxshop"
+                    LogoName = "Eoxshop"
+                    Phone = "44(0)23 9226 6031"
+                    Email = "sales@eoxshop.com"
+            End Select
+        Catch ex As Exception
+            WebSiteLogging.LogApplicationError(ex)
+        End Try
+    End Sub
+
+    Protected Sub Page_Loadt(sender As Object, e As EventArgs) Handles Me.Load
+        DataBind()
+    End Sub
+
+    ''' <summary>
+    ''' Returns current channel
+    ''' <para>can't use WestGroup.Profiles.Domain.GetName as this page can't use RedirectorTemplate</para>
+    ''' </summary>
+    ''' <returns></returns>
+    Private Function GetMyChannel() As Channels
+        Dim Host = Page.Request.Url.Host.ToLower()
+        If Host.Contains(".eoxshop.com.") Then
+            Return Channels.Eoxshop
+        ElseIf Host.Contains(".injectech.net.") Then
+            Return Channels.Injectech
+        ElseIf Host.Contains(".westgroup.co.uk.") Then
+            Return Channels.Westgroup
+        End If
+        Return Channels.Unknown
+    End Function
+
+</script>
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>StoreFront Error</title>
+    <link rel="icon" href="/resources/WestGroup/images/channel/<%#Channel%>/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="/resources/westgroup/css/error.css"/>
+</head>
+
+<body>
+
+    <a class="logo-link" href="http://<%=Request.Url.Host %>">    
+	    <table>
+		    <tr>
+			    <td>
+				    <div class="logo <%#LogoName %>">
+					    <img class="logo-image" src="/resources/WestGroup/images/channel/<%#Channel%>/<%#Channel%>-logo.png" title="Site Undergoing Maintenance - We'll be back soon" />
+				    </div>
+			    </td>
+			    <td>
+				    <div class="logo-name"><%#LogoName%></div>
+			    </td>
+		    </tr>
+	    </table>
+    </a>
+	
+	<h1>We'll be back shortly</h1>
+	
+    <div class="default-box" style="margin:auto; text-align:center;">		
+		<div class="text-content">		
+			<p>
+                The page you have requested cannot be found. Maybe the page was moved or deleted, or perhaps the address is mistyped.
+			</p>			          
+			<p>
+                Please 
+                <a href="http://<%=Request.Url.Host %>">
+                    click here
+                </a> 
+                to return to the home page, or alternatively please call us on 
+                <strong><%#Phone %></strong> 
+                or email us at 
+                <a href="mailto:<%#Email %>" target="_blank">
+                    <%#Email %>
+                </a>
+			</p>         
+		</div>	
+	</div>    
+</body>
+</html>
