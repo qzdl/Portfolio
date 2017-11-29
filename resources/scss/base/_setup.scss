@@ -1,6 +1,6 @@
 // main: ../imports.scss
 
-body {
+html {
   font-size: 62.5%;
 }
 
@@ -8,16 +8,7 @@ body {
 *:after {
   z-index: -1;
   box-sizing: border-box;
-    transition: 0.5s ease-in-out;
-}
-
-.section, .section--headline {
-  padding: 0 0 10px 0;
-  overflow: hidden;
-
-  &:last-of-type {
-    padding: 0;
-  }
+  transition: 0.5s ease-in-out;
 }
 
 p {
