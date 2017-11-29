@@ -13,3 +13,28 @@ body {
 @include headings(h1 h2 h3 h4 h5 h6) {
   @extend %heading;
 }
+
+.text-block {
+  @include font-size($font__size);
+  margin-bottom: 7px;
+  line-height: 13px;
+
+  &__title {
+    text-transform: uppercase;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 3px;
+  }
+
+  &__chunk {
+    display: block;
+
+    &.para {
+      margin-top: 7px;
+    }
+  }
+}
+
+.no-link {
+  color: $font__color;
+}

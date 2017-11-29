@@ -16,3 +16,52 @@
 .one-col {
 
 }
+
+.column {
+  float: left;
+  @include font-size($font__size);
+}
+
+.col {
+  &-80-20 {
+  font-size: 0;
+
+    .column {
+      &.first {
+        width: 80%;
+      }
+
+      &.second {
+        width: 20%;
+      }
+    }
+  }
+
+  &-75-25 {
+  font-size: 0;
+
+    .column {
+      &.first {
+        width: 75%;
+      }
+
+      &.second {
+        width: 25%;
+      }
+    }
+  }
+
+  &-70-30 {
+    font-size: 0;
+    .column {
+      &.first {
+        width: 70%;
+      }
+
+      &.second {
+        width: 30%;
+      }
+    }
+  }
+
+}

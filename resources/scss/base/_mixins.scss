@@ -1,17 +1,30 @@
 // main: ../imports.scss
 
+// ----------------------------------
+// MIXINS
+// ----------------------------------
+
+// Cross browser support
+// ---------------------
 @mixin crossbrowser($property, $val) {
   -webkit-#{$property}: $val;
   -moz-#{$property}: $val;
   -ms-#{$property}: $val;
+  -o-#{$property}: $val;
   #{$property}: $val;
 }
 
+
+// Rem font-size
+// -------------
 @mixin font-size($size: 1.6) {
   font-size: $size * 10px;
   font-size: $size * 1rem;
 }
 
+
+// Heading, looping down font-size
+// -------------------------------
 @mixin headings($list, $size: 4.2) {
   @each $item in $list {
     $size: $size - 0.6;
@@ -21,4 +34,230 @@
       @content;
     }
   }
+}
+
+
+// Default button styles
+@mixin button($bg-col, $text-col, $bg-col--active, $text-col--active) {
+  font-weight: 300;
+  background-color: $bg-col;
+  color: $text-col;
+
+  &:hover {
+    background-color: $bg-col--active;
+    color: $text-col--active;
+  }
+}
+
+
+// keyframes
+// ---------
+@mixin rainbow($name, $property:color) {
+  @-webkit-keyframes rainbow {
+    0% {$property: #ff0000;}
+    10% {$property: #ff8000;}
+    20% {$property: #ffff00;}
+    30% {$property: #80ff00;}
+    40% {$property: #00ff00;}
+    50% {$property: #00ff80;}
+    60% {$property: #00ffff;}
+    70% {$property: #0080ff;}
+    80% {$property: #0000ff;}
+    90% {$property: #8000ff;}
+    100% {$property: #ff0080;}
+  }
+
+  @-ms-keyframes rainbow {
+    0% {$property: #ff0000;}
+    10% {$property: #ff8000;}
+    20% {$property: #ffff00;}
+    30% {$property: #80ff00;}
+    40% {$property: #00ff00;}
+    50% {$property: #00ff80;}
+    60% {$property: #00ffff;}
+    70% {$property: #0080ff;}
+    80% {$property: #0000ff;}
+    90% {$property: #8000ff;}
+    100% {$property: #ff0080;}
+  }
+
+  @-o-keyframes rainbow {
+    0% {$property: #ff0000;}
+    10% {$property: #ff8000;}
+    20% {$property: #ffff00;}
+    30% {$property: #80ff00;}
+    40% {$property: #00ff00;}
+    50% {$property: #00ff80;}
+    60% {$property: #00ffff;}
+    70% {$property: #0080ff;}
+    80% {$property: #0000ff;}
+    90% {$property: #8000ff;}
+    100% {$property: #ff0080;}
+  }
+
+  @keyframes rainbow {
+    0% {$property: #ff0000;}
+    10% {$property: #ff8000;}
+    20% {$property: #ffff00;}
+    30% {$property: #80ff00;}
+    40% {$property: #00ff00;}
+    50% {$property: #00ff80;}
+    60% {$property: #00ffff;}
+    70% {$property: #0080ff;}
+    80% {$property: #0000ff;}
+    90% {$property: #8000ff;}
+    100% {$property: #ff0080;}
+  }
+}
+
+// rainbow secondary
+// -----------------
+
+
+// Sizing
+// ------
+@mixin size($width, $height: $width) {
+	width: $width;
+	height: $height;
+}
+@mixin square($size) {
+	@include size($size, $size);
+}
+
+
+// Create Triangle
+// ---------------
+@mixin triangle($direction: $triangle-direction-default,
+								$size: $triangle-size-default,
+								$color: $triangle-color-default,
+								$center: false,
+								$element: $triangle-element-default) {
+	&:#{$element} {
+		@if not $center {
+			position: absolute;
+		}
+		content:'';
+		@include square(0);
+		-webkit-transform: rotate(360deg);
+		border-style: solid;
+		@if $direction == up {
+			border-width: 0 $size ($size*1.625) $size;
+			border-color: transparent transparent $color transparent;
+			@if $center {
+				@include absolute(null,null,100%,50%);
+				transform: translateX(-$size);
+			}
+		}
+		@else if $direction == up-right {
+			border-width: 0 $size $size 0;
+			border-color: transparent $color transparent transparent;
+			@if $center {
+				@include absolute(0,0);
+			}
+		}
+		@else if $direction == right {
+			border-width: $size 0 $size ($size*1.625);
+			border-color: transparent transparent transparent $color;
+			@if $center {
+				@include absolute(50%,null,null,100%);
+				transform: translateY(-$size);
+			}
+		}
+		@else if $direction == down-right {
+			border-width: 0 0 $size $size;
+			border-color: transparent transparent $color transparent;
+			@if $center {
+				@include absolute(null,0,0);
+			}
+		}
+		@else if $direction == down {
+			border-width: ($size*1.625) $size 0 $size;
+			border-color: $color transparent transparent transparent;
+			@if $center {
+				@include absolute(100%,null,null,50%);
+				transform: translateX(-$size);
+			}
+		}
+		@else if $direction == down-left {
+			border-width: $size 0 0 $size;
+			border-color: transparent transparent transparent $color;
+			@if $center {
+				@include absolute(null,null,0,0);
+			}
+		}
+		@else if $direction == left {
+			border-width: $size ($size*1.625) $size 0;
+			border-color: transparent $color transparent transparent;
+			@if $center {
+				@include absolute(50%,100%);
+				transform: translateY(-$size);
+			}
+		}
+		@else if $direction == up-left {
+			border-width: $size $size 0 0;
+			border-color: $color transparent transparent transparent;
+			@if $center {
+				@include absolute(0,null,null,0);
+			}
+		}
+		@else {
+			@warn "Available directions: up, up-right, right, down-right, down, down-left, left, up-left.";
+		}
+		@content;
+	}
+}
+
+
+// Create a circle, with an optional border
+// ----------------------------------------
+@mixin circle($size: $circle-size-default,
+						$color: $circle-color-default,
+						$border-width: $circle-border-width-default,
+						$border-color: $circle-border-color-default,
+						$display: $circle-display-default) {
+	display: $display;
+	border-radius: 50%;
+	@if $border-width {
+		@include square($size);
+		background-color: $color;
+		border: $border-width solid $border-color;
+	}
+	@else{
+		@if $color == inherit {
+			border-width: $size/2;
+			border-style: solid;
+			@include square(0);
+		}
+		@else {
+			@include square($size);
+			background-color: $color;
+		}
+	}
+}
+
+
+// Advanced positioning
+// --------------------
+@mixin position($type,
+								$top: $position-default,
+								$right: $position-default,
+								$bottom: $position-default,
+								$left: $position-default) {
+	position: $type;
+	$allowed_types: absolute relative fixed;
+	@if not index($allowed_types, $type) {
+		@warn "Unknown position: #{$type}.";
+	}
+	@each $data in top $top, right $right, bottom $bottom, left $left {
+		#{nth($data, 1)}: nth($data, 2);
+	}
+}
+@mixin absolute($top: $position-default, $right: $position-default, $bottom: $position-default, $left: $position-default) {
+	@include position(absolute, $top, $right, $bottom, $left);
+}
+@mixin relative($top: $position-default, $right: $position-default, $bottom: $position-default, $left: $position-default) {
+	@include position(relative, $top, $right, $bottom, $left);
+}
+@mixin fixed($top: $position-default, $right: $position-default, $bottom: $position-default, $left: $position-default) {
+	@include position(fixed, $top, $right, $bottom, $left);
 }

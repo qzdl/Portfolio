@@ -1,0 +1,35 @@
+// main: ../imports.scss
+
+.media {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1em;
+}
+
+.media__figure {
+  margin-right: 1em;
+}
+
+.media__body {
+
+}
+
+.media__body {
+  flex: 1;
+  &,&:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.Media-title {
+  margin: 0 0 .5em;
+}
+
+.Media--center {
+  align-items: center;
+}
+
+.Media--reverse > .Media-figure {
+  order: 1;
+  margin: 0 0 0 1em;
+}

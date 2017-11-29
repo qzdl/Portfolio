@@ -1,61 +1,31 @@
 // main: ../imports.scss
 
-.no-link {
-  color: $font__color;
-}
+// ----------------------------------
+// GLOBAL
+// ----------------------------------
 
-.job-title {
-  font-style: italic;
-}
+.rainbow {
+  &__txt {
+    @extend %rainbow__txt;
 
-.column {
-  float: left;
-  font-size: $font__size;
-}
-
-.col {
-  &-80-20 {
-  font-size: 0;
-
-    .column {
-      &.first {
-        width: 80%;
-      }
-
-      &.second {
-        width: 20%;
+    &--active {
+      &:hover, &:focus {
+        @extend %rainbow__txt;
       }
     }
   }
 
-  &-75-25 {
-  font-size: 0;
+  &__bg {
+    @extend %rainbow__bg;
 
-    .column {
-      &.first {
-        width: 75%;
-      }
-
-      &.second {
-        width: 25%;
+    &--active {
+      &:hover, &:focus {
+        @extend %rainbow__bg;
       }
     }
   }
-
-  &-70-30 {
-    font-size: 0;
-    .column {
-      &.first {
-        width: 70%;
-      }
-
-      &.second {
-        width: 30%;
-      }
-    }
-  }
-
 }
+
 
 h1 {
   font-size: $font__size--headline;
@@ -63,14 +33,9 @@ h1 {
   text-transform: uppercase;
 }
 
-footer {
-  text-align: center;
-}
 
-.first-name {
-  font-weight: 600;
-  text-transform: uppercase;
-}
+
+
 
 ul {
   list-style: none;
@@ -81,26 +46,7 @@ img.media {
   overflow: hidden;
 }
 
-.text-block {
-  font-size: $font__size;
-  margin-bottom: 7px;
-  line-height: 13px;
 
-  &__title {
-    text-transform: uppercase;
-    font-weight: 600;
-    display: block;
-    margin-bottom: 3px;
-  }
-
-  &__chunk {
-    display: block;
-
-    &.para {
-      margin-top: 7px;
-    }
-  }
-}
 
 .clearfix {
   clear:both;
@@ -112,28 +58,7 @@ img.media {
   float: right;
 }
 
-.tech {
-  padding-left: 15px;
 
-  .rating {
-    font-weight: 700;
-    float: right;
-    text-align: right;
-  }
-
-  li {
-    &::before {
-      content: "\2020";
-    }
-  }
-}
-
-a {
-  color: $link--actionable;
-  &:hover {
-    @extend .rainbow;
-  }
-}
 
 @media(max-width: 550px) {
   .bold-right {

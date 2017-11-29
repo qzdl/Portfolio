@@ -2,16 +2,21 @@
 @import "base/variables";
 @import "base/mixins";
 @import "base/functions";
+@import "base/_keyframes";
 @import "base/setup";
 @import "base/global";
+@import "base/placeholders";
 
 //vendor
 @import "vendor/bootstrap";
+//@import "vendor/precompiled/bootstrap";
 
 //common
+@import "common/media-item";
 @import "common/buttons";
 @import "common/forms";
 @import "common/typography";
+@import "common/section";
 @import "common/styles";
 
 //layout
@@ -22,6 +27,7 @@
 //components
 @import "components/columns";
 @import "components/navigation";
+@import "components/page";
 
 //templates
 @import "templates/index";

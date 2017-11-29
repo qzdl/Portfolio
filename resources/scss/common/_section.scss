@@ -1,0 +1,19 @@
+// main: ../imports.scss
+
+.section, {
+  &__heading {
+    text-transform: uppercase;
+    border-bottom: solid 1px $font__color;
+    margin-bottom: 7px;
+    font-weight: 700;
+
+    &,.column {
+      @include font-size($font__size--heading);
+    }
+  }
+
+  &__content {
+    padding-left: 10px;
+    overflow: hidden;
+  }
+}

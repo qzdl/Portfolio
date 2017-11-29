@@ -1,1 +1,59 @@
 // main: ../imports.scss
+
+@function random-color($min: 0, $max: 255, $alpha: 1) {
+	@if $min < 0 {
+		$min: -1;
+	} @else {
+		$min: $min - 1;
+	}
+	@if $max > 255 {
+		$max: 256;
+	} @else {
+		$max: $max + 1;
+	}
+	$red: random($max) + $min;
+	$green: random($max) + $min;
+	$blue: random($max) + $min;
+	@return rgba($red, $green, $blue, $alpha);
+}
+
+@function reverse($string) {
+	$reversed-string: '';
+	@for $i from 1 through str-length($string) {
+		$char: str-slice($string, $i, $i);
+		$reversed-string: "#{$char}#{$reversed-string}";
+	}
+	@return #{$reversed-string};
+}
+
+@function tint($color, $percent: $mix-percent-default){
+	@return mix(white, $color, $percent);
+}
+
+@function shade($color, $percent: $mix-percent-default){
+	@return mix(black, $color, $percent);
+}
+
+@function strip-units($value) {
+	@return $value / ($value * 0 + 1);
+}
+
+@function rem-calc($px, $base-val: $base-px-default) {
+	@if not unitless($px) {
+		$px: strip-units($px);
+	}
+	@if not unitless($base-val) {
+		$base-val: strip-units($base-val);
+	}
+	@return ($px / $base-val) * 1rem;
+}
+
+@function em-calc($px, $base-val: $base-px-default) {
+	@if not unitless($px) {
+		$px: strip-units($px);
+	}
+	@if not unitless($base-val) {
+		$base-val: strip-units($base-val);
+	}
+	@return ($px / $base-val) * 1em;
+}

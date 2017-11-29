@@ -4,7 +4,10 @@
 $white: #ffffff;
 $off-white: #f2f2f2;
 
+$green: #3dc51b;
+
 $pink: #ff8686;
+$red: #bb1e1e;
 
 $grey--light: #b6b6b6;
 $grey: #777777;
@@ -13,17 +16,62 @@ $grey--dark: #444444;
 $black: #1a1a1a;
 $black--true: #000000;
 
-// typography
-$font: "Open Sans", "Sans Serif";
-$font__color: $grey--dark;
-$font__size: 11px;
-$font__size--heading: 12px;
-$font__size--headline: 30px;
-$link: $grey;
+// states
 $action: $pink;
+$success: $green;
+$error: $red;
 
 // applied
-$body__bg: $off-white;
+$primary: $grey;
+$primary--light: #a1a1a2;
+$primary--accent: $action;
+
+//template
+$resume__bg: $off-white;
+
+// component
 $page__bg: $white;
 
-$link--actionable: $pink;
+// typography
+$font: 'Times New Roman';
+$font__color: $grey--dark;
+$font__size: 1.1;
+$font__size--heading: 1.2;
+$font__size--headline: 3.0;
+$link: $grey;
+$link--active: $pink;
+
+// buttons
+$btn-width: 250px !default;
+$btn-height: 80px !default;
+$btn-full: $btn-height+$btn-width !default;
+$btn-half: $btn-full/2 !default;
+$bg-color: #eeeeee !default;
+
+// ----------------------------------
+// Variable settings
+// ----------------------------------
+
+// Base px
+$base-px-default: 16px !default;
+// Breakpoints
+$hdpi-ratio-default: 1.3 !default;
+// Border Radius
+$border-radius-default: 5px !default;
+// Placeholder Color
+$placeholder-color-default: #555555 !default;
+// Triangle
+$triangle-direction-default: right !default;
+$triangle-size-default: $base-px-default !default;
+$triangle-color-default: #222222 !default;
+$triangle-element-default: after !default;
+// Circle
+$circle-size-default: $base-px-default !default;
+$circle-color-default: inherit !default;
+$circle-border-width-default: null !default;
+$circle-border-color-default: #222222 !default;
+$circle-display-default: inline-block !default;
+// Position
+$position-default: null !default;
+// Tint/Shade
+$mix-percent-default: 15% !default;
