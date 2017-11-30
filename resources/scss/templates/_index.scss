@@ -1,6 +1,5 @@
 // main: ../imports.scss
 
-a,
 .section-contact .btn {
   transition: all .25s;
 }
@@ -11,7 +10,6 @@ a,
   align: center;
 }
 
-.navbar a,
 .section-about p {
   text-align: center;
 }
@@ -19,16 +17,15 @@ a,
 .navbar {
   padding: 10px 0;
   align: center;
-  background-color: #d9d9d9;
 }
 
 .navbar a {
   font-size: 25px;
-}
+} // !!!
 
 .navbar .fa-external-link {
   font-size: 10px;
-}
+} // !!!
 
 .main-heading {
   font-family: 'Times New Roman';
