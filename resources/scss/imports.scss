@@ -1,50 +1,54 @@
-//base
-@import "base/variables";
-@import "base/mixins";
-@import "base/functions";
-@import "base/_keyframes";
-@import "base/setup";
-@import "base/global";
-@import "base/placeholders";
+// base
+@import 'base/variables';
+@import 'base/mixins';
+@import 'base/functions';
+@import 'base/_keyframes';
+@import 'base/setup';
+@import 'base/global';
+@import 'base/placeholders';
 
-//vendor
-@import "vendor/bootstrap";
-//@import "vendor/precompiled/bootstrap";
+// vendor
+@import 'vendor/bootstrap';
+//@import 'vendor/precompiled/bootstrap';
 
-//common
-@import "common/media-item";
-@import "common/buttons";
-@import "common/forms";
-@import "common/typography";
-@import "common/section";
-@import "common/styles";
+// common
+@import 'common/media-item';
+@import 'common/buttons';
+@import 'common/forms';
+@import 'common/typography';
+@import 'common/section';
+@import 'common/styles';
 
-//layout
-@import "layout/header";
-@import "layout/body";
-@import "layout/footer";
+// layout
+@import 'layout/header';
+@import 'layout/body';
+@import 'layout/footer';
 
-//components
-@import "components/columns";
-@import "components/navigation";
-@import "components/page";
+// components
+@import 'components/columns';
+@import 'components/navigation';
+@import 'components/page';
 
-//templates
-@import "templates/index";
-@import "templates/resume";
-@import "templates/pong";
-@import "templates/fractal-generator";
-@import "templates/weather-app";
-@import "templates/quote-generator";
+// templates
+@import 'templates/index';
+@import 'templates/resume';
+@import 'templates/pong';
+@import 'templates/fractal-generator';
+@import 'templates/weather-app';
+@import 'templates/quote-generator';
 
-//breakpoints
-@import "breakpoints/lg";
-@import "breakpoints/lg-md";
-@import "breakpoints/md";
-@import "breakpoints/md-sm";
-@import "breakpoints/sm";
-@import "breakpoints/sm-xs";
-@import "breakpoints/xs";
+// breakpoints
+@import 'breakpoints/lg';
+@import 'breakpoints/lg-md';
+@import 'breakpoints/md';
+@import 'breakpoints/md-sm';
+@import 'breakpoints/sm';
+@import 'breakpoints/sm-xs';
+@import 'breakpoints/xs';
 
-//misc
-@import "misc/panic";
+// print
+@import 'print/print__SETUP';
+@import 'print/print__resume';
+
+// misc
+@import 'misc/panic';

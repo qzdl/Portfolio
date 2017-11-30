@@ -1,0 +1,9 @@
+// main: ../imports.scss
+
+@media print {
+  .resume {
+    .page {
+      padding: 0;
+    }
+  }
+}
