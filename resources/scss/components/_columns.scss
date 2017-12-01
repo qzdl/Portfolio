@@ -18,13 +18,11 @@
 }
 
 .column {
-  float: left;
-  @include font-size($font__size);
+  float: left;  
 }
 
 .col {
   &-80-20 {
-  font-size: 0;
 
     .column {
       &.first {

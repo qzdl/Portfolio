@@ -7,6 +7,11 @@
   margin: 10px auto;
   padding: 3rem 5% 3% 5%;
 
+  p,
+  li {
+    @include font-size($page__font__size);
+  }
+
   .tech {
     padding-left: 15px;
 
@@ -23,12 +28,28 @@
     }
   }
 
-  .job-title {
-    font-style: italic;
-  }
-
-  .first-name {
+  .bold {
     font-weight: 600;
     text-transform: uppercase;
+  }
+
+  .text-block {
+    margin-bottom: 7px;
+    line-height: 13px;
+
+    &__title {
+      text-transform: uppercase;
+      font-weight: 600;
+      display: block;
+      margin-bottom: 3px;
+    }
+
+    &__chunk {
+      display: block;
+
+      &.para {
+        margin-top: 7px;
+      }
+    }
   }
 }

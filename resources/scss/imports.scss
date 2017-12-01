@@ -1,3 +1,6 @@
+// vendor
+@import 'vendor/bootstrap';
+
 // base
 @import 'base/variables';
 @import 'base/mixins';
@@ -6,9 +9,6 @@
 @import 'base/setup';
 @import 'base/global';
 @import 'base/placeholders';
-
-// vendor
-@import 'vendor/bootstrap';
 
 // common
 @import 'common/media-item';

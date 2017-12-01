@@ -35,15 +35,10 @@ h1 {
   text-transform: uppercase;
 }
 
-
-
-
 img.media {
   width: 100%;
   overflow: hidden;
 }
-
-
 
 .clearfix {
   clear:both;
@@ -55,7 +50,9 @@ img.media {
   float: right;
 }
 
-
+.italic {
+  font-style: italic;
+}
 
 @media(max-width: 550px) {
   .bold-right {

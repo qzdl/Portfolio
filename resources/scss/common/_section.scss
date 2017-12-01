@@ -1,6 +1,6 @@
 // main: ../imports.scss
 
-.section, {
+.section {
   padding: 0 0 10px 0;
   overflow: hidden;
 
@@ -15,11 +15,11 @@
     font-weight: 700;
 
     &,.column {
-      @include font-size($font__size--heading);
+      @include font-size($page__font__size);
     }
   }
 
   &__content {
-    padding-left: 10px;    
+    padding-left: 10px;
   }
 }

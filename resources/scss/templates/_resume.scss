@@ -3,4 +3,11 @@
   font-family: "Open Sans", "Sans Serif"!important;
   background-color: $resume__bg;
   padding: 5px 15px;
+
+  footer {
+    background: none;
+    padding: 0;
+    text-align: center;
+    @include font-size(1);
+  }
 }
