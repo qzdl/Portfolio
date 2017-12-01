@@ -52,4 +52,28 @@
       }
     }
   }
+
+  section {
+    padding: 0 0 10px 0;
+    overflow: hidden;
+
+    &:last-of-type {
+      padding: 0;
+    }
+
+    &__heading {
+      text-transform: uppercase;
+      border-bottom: solid 1px $font__color;
+      margin-bottom: 7px;
+      font-weight: 700;
+
+      &,.column {
+        @include font-size($page__font__size);
+      }
+    }
+
+    &__content {
+      padding-left: 10px;
+    }
+  }
 }

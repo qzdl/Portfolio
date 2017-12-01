@@ -11,11 +11,11 @@
 @import 'base/placeholders';
 
 // common
+@import 'common/section';
 @import 'common/media-item';
 @import 'common/buttons';
 @import 'common/forms';
 @import 'common/typography';
-@import 'common/section';
 @import 'common/styles';
 
 // layout
@@ -27,6 +27,7 @@
 @import 'components/columns';
 @import 'components/navigation';
 @import 'components/page';
+@import 'components/main';
 
 // templates
 @import 'templates/index';

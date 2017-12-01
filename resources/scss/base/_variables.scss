@@ -6,6 +6,7 @@ $off-white: #f2f2f2;
 $green: #3dc51b;
 $pink: #ff8686;
 $red: #bb1e1e;
+$grey--lightest: #d9d9d9;
 $grey--light: #b6b6b6;
 $grey: #777777;
 $grey--dark: #444444;
@@ -21,6 +22,10 @@ $error: $red;
 $primary: $grey;
 $primary--light: #a1a1a2;
 $primary--accent: $action;
+$zebra: $grey--lightest;
+
+//layout
+$footer__color: $grey--lightest;
 
 //template
 $resume__bg: $off-white;
@@ -30,6 +35,9 @@ $page__bg: $white;
 $page__font__size: 1.1;
 $page__font__size--heading: 1.2;
 $page__font__size--headline: 3.0;
+
+$main-height: 680px;
+$main__heading__color: $white;
 
 // typography
 $font: 'Open Sans', 'Sans Serif';

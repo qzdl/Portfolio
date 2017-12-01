@@ -1,25 +1,21 @@
 // main: ../imports.scss
 
-.section {
-  padding: 0 0 10px 0;
-  overflow: hidden;
+// ----------------------------------
+// SECTION
+// ----------------------------------
 
-  &:last-of-type {
-    padding: 0;
+section {
+  .block {
+      padding: 5em 0; //remify
   }
 
-  &__heading {
+  .section__heading {
     text-transform: uppercase;
     border-bottom: solid 1px $font__color;
     margin-bottom: 7px;
     font-weight: 700;
-
-    &,.column {
-      @include font-size($page__font__size);
-    }
   }
 
-  &__content {
-    padding-left: 10px;
+  .section__content {
   }
 }

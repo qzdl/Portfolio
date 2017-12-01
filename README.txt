@@ -1,3 +1,3 @@
-A Pen created at CodePen.io. You can find this one at http://codepen.io/qzdl/pen/NpXyNQ.
+Real use-case Portfolio Site built from '' framework @ samuelculpepper.com
 
  

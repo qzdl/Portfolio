@@ -4,6 +4,26 @@
 // MIXINS
 // ----------------------------------
 
+@mixin color-block($bg-col, $border: none, $top: 0, $full-width: 'false') {
+  @if $full-width = 'false' {
+    background-color: $bg-col;
+  }
+
+  z-index: 1;
+
+  &::after {
+    content: "";
+    background-color: $bg-col; /*$off-white */
+    border-top: $border;
+    position: absolute;
+    top: $top;
+    left: -5000%;
+    bottom: 0;
+    right: -5000%;
+    z-index: -2;
+  }
+}
+
 // Cross browser support
 // ---------------------
 @mixin crossbrowser($property, $val) {
