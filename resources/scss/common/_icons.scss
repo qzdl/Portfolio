@@ -1,0 +1,31 @@
+.icon {
+
+}
+
+.icon-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+
+  li:not(:first-child) a {
+    margin-left: 1em;
+  }
+
+  a {
+    display: block;
+    padding: .5em .5rem;
+    font-size: 1rem;
+    color: #f8f8f8;
+    border-radius: 50%;
+    border: 2px solid;
+
+    &:hover,
+    &:focus {
+      color: $link--active;
+    }
+  }
+
+}

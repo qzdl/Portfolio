@@ -1,243 +1,79 @@
 // main: ../imports.scss
+.index {
 
-.section-contact .btn {
-  transition: all .25s;
-}
-
-.styline {
-  width: 50%;
-  height: 10px;
-  align: center;
-}
-
-.about p {
-  text-align: center;
-}
-
-
-.main-heading {
-  font-family: 'Times New Roman';
-  font-weight: 300;
-  text-align: center;
-  align: center;
-  text-transform: uppercase;
-  letter-spacing: 10px;
-}
-
-.container > h1 {
-  text-align: center;
-  //color: #ff8686; //probably worth changing all to, or removing this
-  text-transform: uppercase;
-  font-weight: 300;
-}
-
-
-
-.services {
-  h2, p {
-    font-weight: 300;
+  h2,
+  h3 {
     text-align: center;
-  }
-}
-
-.kw p {
-  font-style: italic;
-}
-
-.contact {
-  text-transform: uppercase;
-}
-
-.sm-ul a {
-  text-align: center;
-  text-decoration: none;
-}
-
-
-//Base
-
-
-
-hr {
-  margin-bottom: 3em;
-  width: 7%;
-}
-
-// ------------------
-// Common/Section Mod
-
-section {
-  // ------------------
-  // Component/Main Mod
-  &.main {
-    background: url(https://pbs.twimg.com/media/C7Pw967X4AEk3h3.jpg:large) no-repeat center center;
-    background-size: cover;
-  }
-
-  &.about {
-    margin-top: 40px;
-  } //layout!!
-
-  &.portfolio {
-
-  }
-
-  &.services {
-    .section-services {
-      background: #f9f9f9;
-    }
-
-    .section-services i {
-      display: block;
-      margin: auto;
-      width: 45px;
-    }
-
-    .section-services .fa-paint-brush {
-      width: 64px;
-    }
-
-    .section-services .fa-code {
-      width: 68px;
-    }
-
-    .section-services h2 {
-      margin: 1em 0;
-    }
-  }
-
-  .testimonials {
-    background: #f9f9f9;
   }
 
   .contact {
-    .section-contact .form-control:focus {
-      border-color: #ad0000;
-      box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(173, 0, 0, 0.6);
-    }
-
-    .section-contact .btn {
-      padding: .5rem 1.75rem;
-      background: #000;
-      font-size: .95rem;
-      color: #fff;
-    }
-
-    .section-contact .btn:hover,
-    .section-contact .btn:focus {
-      background: #ff8686;
-      border-color: #9ad9af;
-    }
-
-  }
-}
-
-
-.container {
-  text-align: center;
-}
-
-
-/*Services*/
-
-
-
-
-/*kind words*/
-
-
-
-
-/*Contact*/
-
-
-
-/* .form-box {
-  padding: 5px 5px 5px 5px;
-  border-radius: 3%;
-  background-color: rgb(247,247,247);
-}
-
-.btn-box {
-  border-width: 100px;
-  border-height: 100px;
-  border-radius: 3%;
-  border-color: rgb(247,27,247);
-}
-*/
-
-.btn-lc {
-  text-transform: lowercase;
-}
-
-#inputMessage {
-  max-width: 100%;
-  min-width: 50%;
-  max-height: 50%;
-  min-height: 40%;
-}
-
-
-/*Footer*/
-
-footer {
-  background: $footer__color;
-}
-//social media (footer)
-.sm-ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
-.sm-ul li:not(:first-child) a {
-  margin-left: 1em;
-}
-
-.sm-ul a {
-  display: block;
-  padding: .5em .5rem;
-  font-size: 1rem;
-  color: #f8f8f8;
-  border-radius: 50%;
-  border: 2px solid;
-}
-
-.sm-ul a:hover,
-.sm-ul a:focus {
-  color: #ff8686;
-}
-
-
-@media (min-width:1200px) {
-  .navbar a {
-  	font-size: 26px;
-  }
-}
-
-/* Medium Breakpoint */
-@media (min-width:992px) and (max-width:1199px) {
-	.navbar a {
-	  font-size: 22px;
-	}
+    text-transform: uppercase;
   }
 
-/* Small & Extra Small Breakpoints */
-@media (max-width:991px) {
+  section {
+    padding: 7.5rem 1.5rem;
 
-}
+    p {
+      text-align: center;
+    }
 
-/* Small Breakpoint */
-@media (min-width:768px) and (max-width:991px) {
-	.navbar a {
-		font-size: 16px;
-	}
-}
+    &.main {
+      background: url(https://pbs.twimg.com/media/C7Pw967X4AEk3h3.jpg:large) no-repeat center center;
+      background-size: cover;
+    }
 
-/* Extra Small Breakpoint */
-@media (max-width:767px) {
+    &.about {
+    }
 
+    &.portfolio {
+
+    }
+
+    &.services {
+        background: #f9f9f9;
+
+        .col-sm-4 {
+          @media (max-width: 767px) {
+            &:not(:first-child) {
+              margin-top: 2rem;
+            }
+          }
+        }
+    }
+
+    &.testimonials {
+      background: #f9f9f9;
+    }
+
+    &.contact {
+     .form-control:focus {
+        border-color: #ad0000;
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(173, 0, 0, 0.6);
+      }
+
+       .btn {
+        padding: .5rem 1.75rem;
+        background: #000;
+        font-size: .95rem;
+        color: #fff;
+
+        &:hover,
+        &:focus {
+          background: #ff8686;
+          border-color: #9ad9af;
+        }
+      }
+    }
+
+    .btn-lc {
+      text-transform: lowercase;
+    }
+
+    #inputMessage {
+      max-width: 100%;
+      min-width: 50%;
+      max-height: 50%;
+      min-height: 40%;
+    }
+  }
 }

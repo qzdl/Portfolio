@@ -1,18 +1,23 @@
+// main: ../imports.scss
+
 .main {
   position: relative;
   height: $main-height;
 
   .main__heading {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    height: 4rem;
-    padding: 0;
-    margin: auto;
+    font-family: 'Times New Roman', Serif;
     color: $main__heading__color;
+    line-height: 1.2;
+    text-align: center;
+    letter-spacing: 1rem;
+    font-weight: 300;
+    top: 20rem;
+    position: relative;
     z-index: 5;
+
+    hr {
+      border-top: solid 1px #eee;
+    }
   }
 
   &:after {

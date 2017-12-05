@@ -12,6 +12,11 @@ p {
   @include font-size($font__size);
 }
 
+hr {
+  margin: 3rem auto 3rem auto;
+  width: 7%;
+}
+
 ul {
   padding: 0;
   margin: 0;
