@@ -1,9 +1,0 @@
-[
-  {
-    "inputFile": "resources/scss/import.scss",
-    "outputFile": "resources/scss/zzzcss/imported.min.css",
-    "options": {
-      "relativeUrls": false
-    }
-  }
-]
