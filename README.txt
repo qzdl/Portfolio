@@ -1,3 +1,3 @@
-Real use-case Portfolio Site built from '' framework @ samuelculpepper.com
+Real use-case Portfolio Site built from the rubbl framework @ samuelculpepper.com
 
  
