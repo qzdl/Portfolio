@@ -1,6 +1,10 @@
 // main: ../imports.scss
 
 @media print {
+  .print-hide {
+    display: none !important;
+  }
+  
   html {
 
   }
@@ -10,7 +14,7 @@
   }
 
   * {
-    
+
   }
 
   h1, .h1,

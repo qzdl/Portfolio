@@ -4,23 +4,24 @@
 // MIXINS
 // ----------------------------------
 
-@mixin color-block($bg-col, $border: none, $top: 0, $full-width: 'false') {
-  @if $full-width = 'false' {
+@mixin color-block($bg-col, $border: none, $top: 0, $full-width: false) {
+  @if $full-width == false {
     background-color: $bg-col;
-  }
+  } @else {
+    position: relative;
+    z-index: 1;
 
-  z-index: 1;
-
-  &::after {
-    content: "";
-    background-color: $bg-col; /*$off-white */
-    border-top: $border;
-    position: absolute;
-    top: $top;
-    left: -5000%;
-    bottom: 0;
-    right: -5000%;
-    z-index: -2;
+    &::after {
+      content: "";
+      background-color: $bg-col; /*$off-white */
+      border-top: $border;
+      position: absolute;
+      top: $top;
+      left: -5000%;
+      bottom: 0;
+      right: -5000%;
+      z-index: -2;
+    }
   }
 }
 
@@ -73,60 +74,60 @@
 // keyframes
 // ---------
 @mixin rainbow($name, $property:color) {
-  @-webkit-keyframes rainbow {
-    0% {$property: #ff0000;}
-    10% {$property: #ff8000;}
-    20% {$property: #ffff00;}
-    30% {$property: #80ff00;}
-    40% {$property: #00ff00;}
-    50% {$property: #00ff80;}
-    60% {$property: #00ffff;}
-    70% {$property: #0080ff;}
-    80% {$property: #0000ff;}
-    90% {$property: #8000ff;}
-    100% {$property: #ff0080;}
+  @-webkit-keyframes #{$name} {
+    0% {#{$property}: #ff0000;}
+    10% {#{$property}: #ff8000;}
+    20% {#{$property}: #ffff00;}
+    30% {#{$property}: #80ff00;}
+    40% {#{$property}: #00ff00;}
+    50% {#{$property}: #00ff80;}
+    60% {#{$property}: #00ffff;}
+    70% {#{$property}: #0080ff;}
+    80% {#{$property}: #0000ff;}
+    90% {#{$property}: #8000ff;}
+    100% {#{$property}: #ff0080;}
   }
 
-  @-ms-keyframes rainbow {
-    0% {$property: #ff0000;}
-    10% {$property: #ff8000;}
-    20% {$property: #ffff00;}
-    30% {$property: #80ff00;}
-    40% {$property: #00ff00;}
-    50% {$property: #00ff80;}
-    60% {$property: #00ffff;}
-    70% {$property: #0080ff;}
-    80% {$property: #0000ff;}
-    90% {$property: #8000ff;}
-    100% {$property: #ff0080;}
+  @-ms-keyframes #{$name} {
+    0% {#{$property}: #ff0000;}
+    10% {#{$property}: #ff8000;}
+    20% {#{$property}: #ffff00;}
+    30% {#{$property}: #80ff00;}
+    40% {#{$property}: #00ff00;}
+    50% {#{$property}: #00ff80;}
+    60% {#{$property}: #00ffff;}
+    70% {#{$property}: #0080ff;}
+    80% {#{$property}: #0000ff;}
+    90% {#{$property}: #8000ff;}
+    100% {#{$property}: #ff0080;}
   }
 
-  @-o-keyframes rainbow {
-    0% {$property: #ff0000;}
-    10% {$property: #ff8000;}
-    20% {$property: #ffff00;}
-    30% {$property: #80ff00;}
-    40% {$property: #00ff00;}
-    50% {$property: #00ff80;}
-    60% {$property: #00ffff;}
-    70% {$property: #0080ff;}
-    80% {$property: #0000ff;}
-    90% {$property: #8000ff;}
-    100% {$property: #ff0080;}
+  @-o-keyframes #{$name} {
+    0% {#{$property}: #ff0000;}
+    10% {#{$property}: #ff8000;}
+    20% {#{$property}: #ffff00;}
+    30% {#{$property}: #80ff00;}
+    40% {#{$property}: #00ff00;}
+    50% {#{$property}: #00ff80;}
+    60% {#{$property}: #00ffff;}
+    70% {#{$property}: #0080ff;}
+    80% {#{$property}: #0000ff;}
+    90% {#{$property}: #8000ff;}
+    100% {#{$property}: #ff0080;}
   }
 
-  @keyframes rainbow {
-    0% {$property: #ff0000;}
-    10% {$property: #ff8000;}
-    20% {$property: #ffff00;}
-    30% {$property: #80ff00;}
-    40% {$property: #00ff00;}
-    50% {$property: #00ff80;}
-    60% {$property: #00ffff;}
-    70% {$property: #0080ff;}
-    80% {$property: #0000ff;}
-    90% {$property: #8000ff;}
-    100% {$property: #ff0080;}
+  @keyframes #{$name} {
+    0% {#{$property}: #ff0000;}
+    10% {#{$property}: #ff8000;}
+    20% {#{$property}: #ffff00;}
+    30% {#{$property}: #80ff00;}
+    40% {#{$property}: #00ff00;}
+    50% {#{$property}: #00ff80;}
+    60% {#{$property}: #00ffff;}
+    70% {#{$property}: #0080ff;}
+    80% {#{$property}: #0000ff;}
+    90% {#{$property}: #8000ff;}
+    100% {#{$property}: #ff0080;}
   }
 }
 

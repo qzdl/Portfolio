@@ -4,10 +4,23 @@
   background-color: $resume__bg;
   padding: 5px 15px;
 
+  a {
+    @extend .rainbow__txt--active;
+  }
+
+  img {
+    width: 100%;
+    overflow: hidden;
+  }
+
   footer {
     background: none;
     padding: 0;
     text-align: center;
     @include font-size(1);
+    span {
+      display: block;
+      > span { display:inline }
+    }
   }
 }

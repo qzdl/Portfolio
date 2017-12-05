@@ -2,10 +2,14 @@
 
 .page {
   background-color: $page__bg;
-  box-shadow: 0px 0px 10px #c9c9c9;
-  max-width: 595px;
-  margin: 10px auto;
-  padding: 3rem 5% 3% 5%;
+  box-shadow: 0 0 1rem #c9c9c9;
+  max-width: 60rem;
+  margin: 1rem auto;
+  padding: 3rem 4% 3% 4%;
+
+  .heading {
+    @include font-size($page__font__size--headline);
+  }
 
   p,
   li {
@@ -13,7 +17,7 @@
   }
 
   .tech {
-    padding-left: 15px;
+    padding-left: 1.5rem;
 
     .rating {
       font-weight: 700;
@@ -34,46 +38,70 @@
   }
 
   .text-block {
-    margin-bottom: 7px;
-    line-height: 13px;
+    margin-bottom: 1rem;
+    line-height: 1.5rem;
 
     &__title {
       text-transform: uppercase;
       font-weight: 600;
       display: block;
-      margin-bottom: 3px;
+      margin-bottom: 0.25rem;
     }
 
     &__chunk {
       display: block;
 
       &.para {
-        margin-top: 7px;
+        margin-top: 0.5rem;
       }
     }
   }
 
   section {
-    padding: 0 0 10px 0;
+    padding: 0 0 1rem 0;
     overflow: hidden;
 
     &:last-of-type {
       padding: 0;
     }
 
-    &__heading {
-      text-transform: uppercase;
-      border-bottom: solid 1px $font__color;
-      margin-bottom: 7px;
-      font-weight: 700;
-
-      &,.column {
-        @include font-size($page__font__size);
+    &.headline {
+      ul {
+        margin-top: 1rem;
       }
     }
 
-    &__content {
-      padding-left: 10px;
+    .section__heading {
+      text-transform: uppercase;
+      border-bottom: solid 1px $font__color;
+      margin-bottom: 0.5rem;
+      font-weight: 700;
+      @include font-size($page__font__size--heading);
+    }
+
+    .section__content {
+      padding-left: 1rem;
     }
   }
+
+  @media (max-width: 550px) {
+    section {
+      .heading { @include font-size($page__font__size--headline - 0.5) }
+
+      &.skills {
+        .col-75-25 {
+          .column {
+            &.first {
+              width: 60%;
+            }
+
+            &.second {
+              width: 40%;
+            }
+          }
+        }
+      }
+    }
+  }
+
 }

@@ -5,14 +5,14 @@
 // ----------------------------------
 
 section {
-  .block {
-      padding: 5em 0; //remify
+  &.block {
+      padding: 5rem 0;
   }
 
   .section__heading {
     text-transform: uppercase;
     border-bottom: solid 1px $font__color;
-    margin-bottom: 7px;
+    margin-bottom: 0.5rem;
     font-weight: 700;
   }
 

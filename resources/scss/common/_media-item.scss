@@ -3,11 +3,11 @@
 .media {
   display: flex;
   align-items: flex-start;
-  margin-bottom: 1em;
+  margin-bottom: 1rem;
 }
 
 .media__figure {
-  margin-right: 1em;
+  margin-right: 1rem;
 }
 
 .media__body {
@@ -22,7 +22,7 @@
 }
 
 .Media-title {
-  margin: 0 0 .5em;
+  margin: 0 0 .5rem;
 }
 
 .Media--center {
@@ -31,5 +31,5 @@
 
 .Media--reverse > .Media-figure {
   order: 1;
-  margin: 0 0 0 1em;
+  margin: 0 0 0 1rem;
 }

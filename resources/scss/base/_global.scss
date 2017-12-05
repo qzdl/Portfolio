@@ -3,6 +3,16 @@
 // ----------------------------------
 // GLOBAL
 // ----------------------------------
+
+.bold-right {
+  font-weight: 600;
+  float: right;
+}
+
+.italic {
+  font-style: italic;
+}
+
 .zebra { // !! test
   >*:nth-child(odd) {
     @include color-block($zebra);
@@ -11,7 +21,7 @@
 
 .zebra--full { // !! test
   >*:nth-child(odd) {
-    @include color-block($zebra, $full-width: 'true');
+    @include color-block($zebra, $full-width: true);
   }
 }
 
@@ -36,51 +46,5 @@
         @extend %rainbow__bg;
       }
     }
-  }
-}
-
-h1 {
-  font-size: $font__size--headline;
-  font-weight: normal;
-  text-transform: uppercase;
-}
-
-img.media {
-  width: 100%;
-  overflow: hidden;
-}
-
-.clearfix {
-  clear:both;
-  overflow: auto;
-}
-
-.bold-right {
-  font-weight: 600;
-  float: right;
-}
-
-.italic {
-  font-style: italic;
-}
-
-@media(max-width: 550px) {
-  .bold-right {
-    float: none;
-    display: block;
-  }
-
-  h1 {
-    font-size: 1.25rem;
-  }
-
-  .no-bullet {
-    padding-left: 10px;
-  }
-}
-
-@media(max-width: 380px) {
-  h1 {
-    font-size: 1.15rem;
   }
 }

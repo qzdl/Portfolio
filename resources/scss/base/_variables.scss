@@ -34,7 +34,7 @@ $resume__bg: $off-white;
 $page__bg: $white;
 $page__font__size: 1.1;
 $page__font__size--heading: 1.2;
-$page__font__size--headline: 3.0;
+$page__font__size--headline: 3.2;
 
 $main-height: 680px;
 $main__heading__color: $white;
@@ -49,8 +49,8 @@ $link: $pink;
 $link--active: $pink;
 
 // buttons
-$btn-width: 250px !default;
-$btn-height: 80px !default;
+$btn-width: 25rem !default;
+$btn-height: 8rem !default;
 $btn-full: $btn-height+$btn-width !default;
 $btn-half: $btn-full/2 !default;
 $bg-color: #eeeeee !default;

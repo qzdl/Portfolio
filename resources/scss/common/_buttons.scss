@@ -59,8 +59,8 @@
 
   &:before {
     content: '';
-    @include absolute(0,-50px,0,0);
-    border-right: 50px solid transparent;
+    @include absolute(0,-5rem,0,0);
+    border-right: 5rem solid transparent;
     border-bottom: $btn-height solid $btn-color-dark;
     transform: translateX(-100%);
   }
@@ -87,14 +87,14 @@
   }
 
   &:before {
-    right: -50px;
-    border-right: 50px solid transparent;
+    right: -5rem;
+    border-right: 5rem solid transparent;
     transform: translateX(-100%);
   }
 
   &:after {
-    left: -50px;
-    border-left: 50px solid transparent;
+    left: -5rem;
+    border-left: 5rem solid transparent;
     transform: translateX(100%);
   }
 
@@ -118,15 +118,15 @@
   }
 
   &:before {
-    right: -50px;
-    border-right: 50px solid transparent;
+    right: -5rem;
+    border-right: 5rem solid transparent;
     border-bottom: $btn-height solid $btn-color-dark;
     transform: translateX(-100%);
   }
 
   &:after {
-    left: -50px;
-    border-left: 50px solid transparent;
+    left: -5rem;
+    border-left: 5rem solid transparent;
     border-top: $btn-height solid $btn-color-dark;
     transform: translateX(100%);
   }
@@ -426,19 +426,19 @@
   &:after {
     @include absolute(50%);
     content: '';
-    @include size(20px);
+    @include size(2rem);
     background-color: $btn-color;
     border-radius: 50%;
   }
 
   &:before {
-    left: -20px;
+    left: -2rem;
     transform: translate(-50%, -50%);
     // animation: criss-cross-left 0.8s reverse;
   }
 
   &:after {
-    right: -20px;
+    right: -2rem;
     transform: translate(50%, -50%);
     // animation: criss-cross-right 0.8s reverse;
   }

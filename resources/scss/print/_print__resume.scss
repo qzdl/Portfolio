@@ -1,9 +1,51 @@
 // main: ../imports.scss
-
-@media print {
-  .resume {
+.resume {
+  @media print {
     .page {
-      padding: 0;
+      padding: 0 !important;
+
+// headings
+      .heading {
+        @include font-size(3.6)
+      }
+      .section__heading {
+        font-weight: 500;
+      }
+
+// columns
+      .col-75-25 {
+        .column {
+          &.first {
+            width: 75% !important;
+          }
+
+          &.second {
+            width: 25% !important;
+          }
+        }
+      }
+
+// globals
+      p {
+        line-height: 1.35rem;
+      }
+
+      .bold-right {
+        font-weight: 500;
+      }
+
+      .text-block {
+        margin-bottom: 0.6rem;
+
+        &__title {
+          margin-bottom: 0;
+          font-weight: 500;
+        }
+
+        &__chunk.para {
+          margin-top: 0.35rem;
+        }
+      }
     }
   }
 }

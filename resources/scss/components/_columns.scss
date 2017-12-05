@@ -18,12 +18,11 @@
 }
 
 .column {
-  float: left;  
+  float: left;
 }
 
 .col {
   &-80-20 {
-
     .column {
       &.first {
         width: 80%;
@@ -36,8 +35,6 @@
   }
 
   &-75-25 {
-  font-size: 0;
-
     .column {
       &.first {
         width: 75%;
@@ -50,7 +47,6 @@
   }
 
   &-70-30 {
-    font-size: 0;
     .column {
       &.first {
         width: 70%;
