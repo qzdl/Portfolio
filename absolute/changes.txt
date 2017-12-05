@@ -1,0 +1,16 @@
+portfolio changes 
+!!! mobile menu collapse
+		hover state on #a
+
+!!! fix design of and implement form
+
+!!! update "previous work" with screen 
+
+!!! remove 	{{{{
+
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+    border-color: #e7e7e7;
+}
+	
+		}}}} on mobile
+		
