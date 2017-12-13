@@ -1,7 +1,10 @@
 portfolio changes
-!!! mobile menu collapse
-		hover state on #a
+
 
 !!! fix design of and implement form
 
-!!! update "previous work" with screen
+!!! update "previous work" with screen caps -- inprog _ pending Bendall
+
+!!! testimonials - luxx kbc Bendall
+
+!!! 
