@@ -52,7 +52,7 @@
       </header>
 -->
       <section id="home" class="main">
-          <h1 class="main__heading">SAMUEL <hr /> UI/UX</h1>
+        <h1 class="main__heading">SAMUEL <hr /> UI/UX</h1>
       </section>
 
       <section id="about" class="about">
@@ -70,7 +70,7 @@
 
             <div class="col-sm-6">
               <p>
-                I offer my services as a freelancer, and curate user experience on contract.
+                I offer my services as a freelancer, and curate user experience on a contractual basis.
               </p>
             </div>
           </div>
@@ -109,135 +109,137 @@
                 the first year.
               </p>
             </div>
-
           </div>
         </div>
       </section>
 
       <section id="portfolio" class="portfolio">
-            <div class="">
-                <h2>Previous Work</h2>
+        <div class="">
+          <h2>Previous Work</h2>
 
-                <hr />
+          <hr />
 
-                <div id="portfolio-carousel" class="carousel slide" data-ride="carousel">
-                  <div class="carousel-inner" role="listbox">
-                    <div class="carousel-item active">
-                      <a href="https://luxx.menu">
-                        <img class="img-hover d-block img-fluid" src="resources/images/portfolio/luxx.png" alt="LUXX Games">
-                      </a>
-                    </div>
-                    <div class="carousel-item">
-                      <a href="https://knightsbridgebusinesscentre.com">
-                        <img class="img-hover d-block img-fluid" src="resources/images/portfolio/kbc.png" alt="Knightsbridge Business Centre">
-                      </a>
-                    </div>
-                    <div class="carousel-item">
-                      <a href="https://www.tombendallphotography.com">
-                        <img class="img-hover d-block img-fluid" src="resources/images/portfolio/bendall-photo.png" alt="Tom Bendall Photography">
-                      </a>
-                    </div>
-                  </div>
-                  <a class="carousel-control-prev" href="#portfolio-carousel" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                  </a>
-                  <a class="carousel-control-next" href="#portfolio-carousel" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                  </a>
-                </div>
+          <div id="portfolio-carousel" class="carousel full slide" data-ride="carousel">
+            <div class="carousel-inner" role="listbox">
+              <div class="carousel-item active">
+                <a href="https://luxx.menu">
+                  <img class="img-hover d-block img-fluid" src="resources/images/portfolio/luxx.png" alt="LUXX Games">
+                </a>
+              </div>
+
+              <div class="carousel-item">
+                <a href="https://knightsbridgebusinesscentre.com">
+                  <img class="img-hover d-block img-fluid" src="resources/images/portfolio/kbc.png" alt="Knightsbridge Business Centre">
+                </a>
+              </div>
+
+              <div class="carousel-item">
+                <a href="https://www.tombendallphotography.com">
+                  <img class="img-hover d-block img-fluid" src="resources/images/portfolio/bendall-photo.png" alt="Tom Bendall Photography">
+                </a>
+              </div>
             </div>
-        </section>
+
+            <a class="carousel-control-prev" href="#portfolio-carousel" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+
+            <a class="carousel-control-next" href="#portfolio-carousel" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </div>
+      </section>
 
       <section id="testimonials" class="testimonials">
-            <div class="container">
-                <h2>Kind Words</h2>
+        <div class="container">
+          <h2>Kind Words</h2>
 
-                <hr />
+          <hr />
 
-                <div class="row">
-                    <div class="col-sm-4">
-                        <p class="text-center">"Kind Words"</p>
+          <div class="row">
+            <div class="col-sm-4">
+              <p class="text-center">"Kind Words"</p>
 
-                        <p class="text-right">&mdash; Client 1</p>
-                    </div>
-
-                    <div class="col-sm-4">
-                        <p class="text-center">"Kind Words"</p>
-
-                        <p class="text-right">&mdash; Client 2</p>
-                    </div>
-
-                    <div class="col-sm-4">
-                        <p class="text-center">"Kind Words"</p>
-
-                        <p class="text-right">&mdash; Client 3</p>
-                    </div>
-                </div>
+              <p class="text-right">&mdash; Client 1</p>
             </div>
-        </section>
+
+            <div class="col-sm-4">
+              <p class="text-center">"Kind Words"</p>
+
+              <p class="text-right">&mdash; Client 2</p>
+            </div>
+
+            <div class="col-sm-4">
+              <p class="text-center">"Kind Words"</p>
+
+              <p class="text-right">&mdash; Client 3</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <section id="contact" class="contact">
-            <div class="container">
-                <h2>Enquire</h2>
+        <div class="container">
+          <h2>Enquire</h2>
 
-                <hr />
+          <hr />
 
-                <div class="row">
-                    <div class="col-sm-4 offset-sm-4">
+          <div class="row">
+            <div class="col-sm-4 offset-sm-4">
+              <div class="form-box">
+                <form class="center-block" action="resources/contact.php" method="POST">
+                  <div class="form-group">
+                    <label class="sr-only" for="inputName">Full name</label>
 
-                        <div class="form-box">
-                            <form class="center-block" action="#" method="post">
-                                <div class="form-group">
-                                    <label class="sr-only" for="inputName">Full name</label>
+                    <input id="inputName" class="form-control" type="text" placeholder="full name" name="name" required />
+                  </div>
 
-                                    <input id="inputName" class="form-control" type="text" placeholder="full name" required />
-                                </div>
+                  <div class="form-group">
+                    <label for="inputMail" class="sr-only">Email Address</label>
 
-                                <div class="form-group">
-                                    <label for="inputMail" class="sr-only">Email Address</label>
+                    <input name="email" id="inputMail" class="form-control" type="email" placeholder="e-mail" name="email" required />
+                  </div>
 
-                                    <input id="inputMail" class="form-control" type="email" placeholder="e-mail" required />
-                                </div>
+                  <div class="form-group">
+                    <label for="inputMessage" class="sr-only">Your Message</label>
 
-                                <div class="form-group">
-                                    <label for="inputMessage" class="sr-only">Your Message</label>
+                    <textarea id="inputMessage" class="form-control" name="message" cols="30" rows="8" placeholder="get in touch" name="message" required></textarea>
+                  </div>
 
-                                    <textarea id="inputMessage" class="form-control" name="message" cols="30" rows="8" placeholder="share your vision" required></textarea>
-                                </div>
-
-                                <div class="form-group">
-                                    <button class="btn btn-default center-block btn-lc" type="submit" value="Hire me">go</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
+                  <div class="form-group">
+                    <button class="btn btn-default center-block btn-lc" type="submit" value="submit" name="submit">go</button>
+                  </div>
+                </form>
+              </div>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
 
       <footer id="footer">
-            <div class="container">
-                <ul class="icon-list">
-                    <li>
-                        <a href="http://twitter.com/samuelculpepper" class="fa fa-twitter" target="_blank"></a>
-                    </li>
+        <div class="container">
+          <ul class="icon-list">
+            <li>
+              <a href="http://twitter.com/samuelculpepper" class="fa fa-twitter" target="_blank"></a>
+            </li>
 
-                    <li>
-                        <a href="http://instagram.com/samuellculpepper" class="fa fa-instagram" target="_blank"></a>
-                    </li>
+            <li>
+              <a href="http://instagram.com/samuellculpepper" class="fa fa-instagram" target="_blank"></a>
+            </li>
 
-                    <li>
-                        <a href="https://www.linkedin.com/in/samuel-c-21795513b/" class="fa fa-linkedin" target="_blank"></a>
-                    </li>
+            <li>
+              <a href="https://www.linkedin.com/in/samuel-c-21795513b/" class="fa fa-linkedin" target="_blank"></a>
+            </li>
 
-                    <li>
-                        <a href="mailto:samuel@samuelculpepper.com" class="fa fa-envelope"></a>
-                    </li>
-                </ul>
-            </div>
-        </footer>
+            <li>
+              <a href="mailto:samuel@samuelculpepper.com" class="fa fa-envelope"></a>
+            </li>
+          </ul>
+        </div>
+      </footer>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

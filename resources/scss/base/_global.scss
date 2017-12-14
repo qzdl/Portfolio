@@ -4,6 +4,16 @@
 // GLOBAL
 // ----------------------------------
 
+.img-hover {
+  transition: opacity 0.4s ease;
+
+  &:hover,
+  &:focus {
+    transition: opacity 0.4s ease;
+    opacity: 0.9;
+  }
+}
+
 .bold-right {
   font-weight: 600;
   float: right;
